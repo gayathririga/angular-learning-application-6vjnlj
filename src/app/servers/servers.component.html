@@ -3,14 +3,14 @@
 <br>
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <br>
-<p>{{ serverName }}</p>
-<br>
 <button class="btn btn-primary" 
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Button</button>
-<br>
-<p [innerText]="allowNewServer"></p>
-<p>{{ serverCreationStatus }}
-<br>
+<br><br>
+<p *ngIf="serverCreated">Server was created {{ serverName }}</p>
+<p>{{ serverCreationStatus }} </p>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<!-- <p>{{ serverCreationStatus }} -->
+<!-- <br>
 <app-server></app-server>
-<app-server></app-server>
+<app-server></app-server> -->
